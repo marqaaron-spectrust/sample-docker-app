@@ -1,0 +1,123 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400&display=swap');
+
+@import "../node_modules/bootstrap/scss/functions";
+
+$saulPrimary: #546778;
+$saulSecondary: #F1C928;
+$saulPrimaryAction: #2764CE;
+$saulSecondaryAction: #F1C928;
+$saulSubmit: #4BAA4E;
+$saulCancel: #B72522;
+
+$spinnerColor: $saulPrimary;
+
+// ------------ BOOTSTRAP CUSTOMIZATION VARIABLES ------------ //
+
+$theme-colors: (
+"primary": $saulPrimaryAction,
+"success": $saulSubmit,
+"warning": $saulSecondaryAction,
+"danger": $saulCancel,
+"info": $saulPrimary
+);
+
+$font-size-base: 1.4rem;
+//$border-radius: 0px;
+$font-family-base: 'Roboto', sans-serif;
+
+// Button Customizations
+//$btn-padding-x: 2px;
+//$btn-padding-y: 4px;
+
+// Input Customizations
+$form-text-margin-top: 0.5rem;
+$form-feedback-font-size: 90%;
+
+// ------------ BOOTSTRAP VUE CUSTOMIZATION VARIABLES ------------ //
+
+$b-sidebar-header-font-size: 2rem;
+
+// ------------ SWEETALERTS2 CUSTOMIZATION VARIABLES ------------ //
+
+$swal2-font-size: 1.4rem !important;
+
+/*$swal2-confirm-button-background-color: $saulSubmit !important;
+$swal2-cancel-button-background-color: $saulCancel !important;*/
+
+// Include Bootstrap and BootstrapVue SCSS files. Must be after variable overrides
+//@import '../node_modules/bootstrap/scss/bootstrap.scss';
+//@import '../node_modules/sweetalert2/src/sweetalert2.scss';
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+
+@import "../node_modules/bootstrap/scss/utilities";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/helpers";
+
+
+// Include any Mixins Logic. Must be after the imports
+
+
+// Additional Custom CSS to apply App Wide
+
+   *:focus {
+       outline: none !important;
+   }
+
+*[disabled] {
+    cursor: not-allowed;
+}
+
+.btn:focus {
+    box-shadow: none !important;
+}
+
+
+html {
+    height: 100%;
+    font-size:62.5%;
+}
+
+body {
+    height: 100%;
+    overflow: hidden;
+    font-size: 1.4rem;
+}
+
+.padded-container{
+    padding: 10px 15px;
+}
+
+.pointer {
+    cursor:pointer
+}
+
+.scroll-test {
+    height:2500px;
+}
+
+.app-container {
+   background-color: rgba(255,255,255,1);
+}
+
+.text-bold {
+    font-weight:bold;
+}
+
+
+
+
+
+
+
+
+
+
