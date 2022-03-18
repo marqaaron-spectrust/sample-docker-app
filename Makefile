@@ -37,5 +37,11 @@ run-local:
     --name simple-user-app \
     marqaaron/simple-user-app
 
+run-production:
+	docker run -d -p ${localPort}:8082 \
+	--env SERVER_DEBUG_MODE=${serverDebug} \
+	--name simple-user-app \
+	marqaaron/simple-user-app
+
 dist-to-static:
 	cp -r app/dist/ server/python_config/static && rm -rf app/dist
