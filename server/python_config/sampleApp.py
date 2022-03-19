@@ -114,9 +114,13 @@ def catch_all(path):
     allowedStaticFileRoutes = ['assets','favicon.ico']
     pathParts = path.split('/')
     if pathParts[0] in allowedStaticFileRoutes:
-        return app.send_static_file(path)
+        response = make_response(app.send_static_file(path))
+        response.set_cookie('marqaaron-session',setSessionCookie(request))
+        return response
     else:
-        return app.send_static_file("index.html")
+        response = make_response(app.send_static_file("index.html"))
+        response.set_cookie('marqaaron-session',setSessionCookie(request))
+        return response
 
 ### CLASSES ###
 
@@ -136,8 +140,8 @@ def main():
     else:
         debug_mode = False
 
-    # Do stuff
-    # Figure out the Kube Proxy thing
+    # Run application
+    # Flask set to serve on port 8082 for all addresses. Be sure Vite is configured for the same.
     app.run(host='0.0.0.0', port=8082, debug=debug_mode)
 
 if __name__ == "__main__":
